@@ -1,0 +1,290 @@
+@font-face {
+  font-family: "BPG Nino Mtavruli";
+  src: url("../shift/bpg_nino_mtavruli_bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #1d1d1d;
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  gap: 20px;
+}
+.movi {
+  color: #fff;
+}
+.fyge {
+  color: #ff5733;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.Menu-item > nav > ul {
+  gap: 90px;
+  display: flex;
+  text-align: center;
+}
+
+.Menu-item > nav > ul li > a {
+  font-family: "BPG Nino Mtavruli";
+  color: #ff5733;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.Menu-item > nav > ul > li:hover {
+  color: aliceblue;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* search-container */
+/* search-container */
+.searchs {
+  display: flex;
+}
+
+/* Expanded search box */
+.expanded-search {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000f2;
+  padding: 20px 20px;
+  z-index: 10;
+}
+
+.Reserch {
+  position: relative;
+  right: 50px;
+  top: 12px;
+  width: 30px;
+  cursor: pointer;
+}
+.Reserchs {
+  position: relative;
+  left: 1650px;
+  top: 5px;
+}
+
+.searchimg {
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  position: relative;
+  right: 55px;
+  cursor: pointer;
+}
+.input_conteiner {
+  display: flex;
+  gap: 5px;
+  margin: 0 140px;
+}
+/* Search input */
+.SearchExpanded {
+  display: flex;
+  width: 90%;
+  height: 50px;
+  background-color: #1d1d1d;
+  color: white;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  font-family: "BPG Nino Mtavruli";
+}
+
+/* Close button */
+.close {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #1d1d1d;
+  font-size: 15px;
+  color: rgb(180, 174, 174);
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+
+.close:hover {
+  color: #ff5733; /* ფერის შეცვლა ჰოვერზე */
+}
+
+.search-container .Search:focus {
+  outline: none;
+}
+.search-results {
+  display: flex;
+  justify-content: center;
+  padding: 20px 140px;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+.no-results {
+  color: #ff5733;
+  font-size: 18px;
+}
+.movie-item {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  transition: background 0.3s ease;
+}
+input:focus,
+.SearchExpanded:focus {
+  outline: none; /* გამორიცხავს კონტურზე ხაზის გამოჩენას */
+  border: none; /* გამორიცხავს ბორდერის ცვლილებას */
+}
+
+/* ავტორიზაცია */
+.login > button {
+  font-family: "BPG Nino Mtavruli";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 33px;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  background: #111111;
+  box-shadow: inset 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+  display: none;
+
+  
+}
+
+.login > button:hover {
+  background: #ff5733; /* ცვლით ფონდის ფერს */
+  color: #fff;
+}
+
+
+.user_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #757575;
+  cursor: pointer; /* მომხმარებელს უკეთესი გამოცდილება */
+}
+
+.user_circle:hover {
+  transition: 0.2s;
+  border: 1px solid #ff5733;
+}
+
+.user_circle > img {
+  width: 36px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  background-color: #1d1d1d;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 5px;
+  z-index: 10;
+  font-family: "BPG Nino Mtavruli";
+  color: #ff5733;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* აქ ვაკეთებ როემლიც 990 პიქსზელზე ჩნდება */
+
+.two-menucontainer {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  display: none;
+}
+
+.first-menu {
+  width: 100%;
+  height: 50px;
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.two-menu {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+}
+
+.Menu-items {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu-items > nav > ul  {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+
+.Menu-items > nav > ul > li > a {
+  height: 30px;
+  color: #f1f1f1;
+  
+}

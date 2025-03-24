@@ -1,0 +1,163 @@
+/* pages.css */
+
+.new-movies {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 120px;
+  }
+  
+  .line {
+    width: 3px;
+    height: 23px;
+    background-color: #ff5733;
+  }
+  
+  .imdb-label {
+    color: #ff5733; /* IMDB: ფერი */
+    font-weight: bold; /* ბოლდი */
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    font-family: "BPG Nino Mtavruli";
+  }
+  .movie-rating {
+    color: #fff; /* რეიტინგის ტექსტის ფერი */
+    font-size: 15px; /* ზომა */
+    font-weight: bold; /* ბოლდი */
+    font-family: "BPG Nino Mtavruli";
+  }
+  .new-movies > h2 {
+    color: white;
+    font-family: "BPG Nino Mtavruli";
+  }
+  
+  .new-movie-item {
+    margin: 20px 120px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .movie-poster-container {
+    position: relative; /* აქ დევს შეფუთვა, რომ overlay იყოს ფოტოს ქვედა ნაწილში */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease; /* დამატებულია ბლური ეფექტის გადმოსაწყვეტი */
+  }
+  .movie-item-line:hover .movie-poster {
+    filter: blur(1.5px); /* მინიმალური ბლური */
+  }
+  /* რეიტინგის ოვერლეი - ქვევით */
+  .rating-overlay {
+    position: absolute;
+    top: 13px; /* ფოტოს ქვედა ნაწილზე */
+    left: 10px; /* მარცხნივ ინტერვალი */
+    background-color: rgba(0, 0, 0, 0.7); /* შავი ფონდი */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  font-size: 14px;
+  opacity: 0; /* ინიციალურად გამჭვირვალე */
+  pointer-events: none; /* ხელს არ უშლის სხვა ელემენტებს */
+  transform: translateY(20px); /* დასაწყისში ზემოთ იქნება */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease; /* ანიმაცია opacity-სა და transform-ზე */
+  }
+  
+  /* როცა ფილმზე ჰოვერებთ, ვაჩვენებთ რეიტინგის ოვერლეის */
+  .movie-item-line:hover .rating-overlay {
+    opacity: 1; /* რეიტინგი გამოჩნდება */
+    top: 13px; /* ფოტოს ქვედა ნაწილისგან წამოიწევს */
+    transform: translateY(0); /* რეიტინგი ავა და დარჩება მუდმივ ადგილას */
+  }
+  /* Carousel container and buttons */
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .carousel-buttons {
+    position: absolute;
+    top: -56px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Disabled button style */
+  .carousel-button.disabled {
+    pointer-events: none;
+    color: #757575;
+  }
+  
+
+  .laptopscreen {
+    display: none;
+  }
+
+  .axalikontaineri {
+    width: 100%;
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .maintenance-message {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "BPG Nino Mtavruli";
+    
+  }
+  
+  .do {
+
+    display: inline-block;
+    opacity: 0;
+    animation: dotAnimation 1.5s infinite;
+  }
+  
+  .do:nth-child(1) {
+    animation-delay: 1s;
+  }
+  
+  .do:nth-child(2) {
+    animation-delay: 1.5s;
+  }
+  
+  .do:nth-child(3) {
+    animation-delay: 2s;
+  }
+  
+  @keyframes dotAnimation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
